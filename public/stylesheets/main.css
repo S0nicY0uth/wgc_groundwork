@@ -33,7 +33,10 @@ h1,h2,h3,h4 {
 
 h3 {
   font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 
 .error {
   text-align: center;
@@ -55,12 +58,9 @@ margin: auto;
   flex-direction: row;
 }
 .profile {
-  /* display: flex; */
-  justify-content: center;
   background-image: url('/images/profile.jpg');
   height: 200px;
   width: 200px;
-  /* justify-content:  center; */
   margin:  auto;
   background-position:  center;
   background-size:  contain;
