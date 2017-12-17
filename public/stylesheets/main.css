@@ -17,11 +17,18 @@ body {
   border: 1px solid #999;
   background: #FCFCFC;
   padding: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 10px;
+  width: 50%;
+  padding: 20px;
+  margin-right: 10px;
 }
 
 .welcome {
   text-align: center;
+
+}
+h1,h2,h3,h4 {
+  font-weight: bold;
 }
 
 h3 {
@@ -37,3 +44,25 @@ h3 {
 }
 
 /* TODO - Add your own styles here */
+.wrap {
+  max-width: 1000px;
+margin: auto;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.profile {
+  /* display: flex; */
+  justify-content: center;
+  background-image: url('/images/profile.jpg');
+  height: 200px;
+  width: 200px;
+  /* justify-content:  center; */
+  margin:  auto;
+  background-position:  center;
+  background-size:  contain;
+  border-radius: 50%;
+}

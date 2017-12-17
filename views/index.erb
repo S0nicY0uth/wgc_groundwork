@@ -1,12 +1,21 @@
+<div class="wrap">
 <% if @profile %>
   <h3><%= @profile["first_name"] %>'s Amazing Profile</h3>
 
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
+  <% count = 0 %>
   <% @profile.each do |field, value| %>
+  <% if count %2 == 0%>
+    <div class="row">
+    <% end %>
     <div class="profile-section box">
-      <h4><%= field %></h4>
+      <h4><%= field.tr('_', ' ').split.map { |i| i.capitalize }.join(' ') %></h4>
       <p class="profile-value"><%= value %></p>
     </div>
+    <% if count %2 != 0%>
+    </div>
+    <% end %>
+    <% count +=1 %>
   <% end %>
 
   <div id="stats" class="box">
@@ -43,13 +52,14 @@
     <a href="/authorise">Authorise</a>
   </div>
 <% end %>
-
+</div>
 
 <!-- Add your Javascript to this script tag -->
 <script language="javascript">
   console.log("I am Javascript!");
 
   var profile_values = document.getElementsByClassName('profile-value');
+  console.log(profile_values);
   var total_words = 0;
 
   // TODO - Count the number of words in the profile.
