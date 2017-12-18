@@ -1,7 +1,17 @@
 <div class="wrap">
 <% if @profile %>
   <h3><%= @profile["first_name"] %>'s Amazing Profile</h3>
+  <div class="personal">
 
+  <% @personal[0].each do |field, value| %>
+
+    <p>
+      <span class="field"><%= field %></span>
+      <%= value %>
+    </p>
+
+  <% end %>
+  </div>
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
   <% count = 0 %>
   <% @profile.each do |field, value| %>
@@ -18,6 +28,8 @@
     <% count +=1 %>
   <% end %>
 
+  <p><%= @profile %></p>
+
   <div id="stats" class="box">
     <h3>Stats</h3>
     <!-- TODO - Set the contents of this span with JavaScript -->
@@ -27,6 +39,7 @@
   <div id="problems" class="box">
     <h3>Programming Problems</h3>
     <a href="/primes">My Prime Number Solution</a>
+
   </div>
 
   <div class="box">

@@ -21,6 +21,11 @@ end
 get '/' do
   if signed_in?
     @profile = trainee.get_profile
+    @personal = [
+      {
+        id: @profile['id'],first_name: @profile['first_name'],last_name: @profile['last_name'],gender: @profile['gender'],tel: @profile['phone_number'], dob: @profile['dob'],github: @profile['github'],twitter: @profile['twitter'],nickname: @profile['nickname'],nickname: @profile['nickname'],employed: @profile['employment_status'],site: @profile['homepage']
+      }
+    ]
   end
 
   erb :index, :layout => :main

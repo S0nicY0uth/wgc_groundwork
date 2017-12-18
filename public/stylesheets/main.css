@@ -66,3 +66,7 @@ margin: auto;
   background-size:  contain;
   border-radius: 50%;
 }
+
+span.field{
+  font-weight: bold!important;
+}
